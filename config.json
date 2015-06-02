@@ -6,13 +6,13 @@
 		"filename": "bundle.js",
 		
 		"copy": [
-			"./bower_components/crafty/dist/crafty.*"
+			"./bower_components/crafty/dist/crafty*"
 		]
 	},
 	
 	"css": {
 		"extension": "scss",
-
+		
 		"copy": [
 			{
 				"name": "bourbon",

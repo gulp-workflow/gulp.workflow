@@ -1,5 +1,5 @@
-# gulp.js-build
-Gulpfile.js that works on js files
+# gulp.workflow
+Gulpfile.js that does the great things
 
 ## Dependencies
 - ["gulp": "^3.8.11"](https://npmjs.org/package/gulp/)
@@ -19,23 +19,34 @@ Gulpfile.js that works on js files
 ```json
 {
 	"environment": "development",
-	"extension": "js"
+	
+	"js": {
+		"extension": "js",
+		"filename": "bundle.js",
+		
+		"copy": [
+			"./bower_components/crafty/dist/crafty*"
+		]
+	},
+	
+	"css": {
+		"extension": "scss",
+		
+		"copy": [
+			{
+				"name": "bourbon",
+				"path": "./bower_components/bourbon/app/assets/stylesheets/**/*"
+			},
+			
+			{
+				"name": "neat",
+				"path": "./bower_components/neat/app/assets/stylesheets/**/*"
+			}
+		]
+	}
 }
 ```
 
 You can change environment to **production** or extension to **ts**/**es6.js** in `config.json` or from command line: `set ENV=production` or `set ENV=ts`
 
-## Useage
-Download repository and in your command line run `npm install`, this will download `node_modules` and you are about to go.
-Install `bower_components` as in example: `bower install crafty`, then open `Gulpfile.js` and add line in `js:copy` task.
-
-- `gulp js:clean` - cleans `./dist/assets/js` directory
-- `gulp js:copy` - copies files from `./bower_components`, but that task need to be updated for every component
-- `gulp js:build` - concatenates `js/ts/es6.js` files from `./src/assets/js` and creates `bundle.js` in `./dist/assets/js`
-- `gulp js:watch` - watches `js/ts/es6.js` files in `./src/assets/js` for chages
-- `gulp js` - default task that cleans, copies, builds and watches javascript files
-
----
-
-- `npm test` - sets environment to development and runs default task of gulp
-- `npm start` - sets environment to production and runs default task of gulp
+## Usage
