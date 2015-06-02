@@ -1,5 +1,9 @@
 /* global process */
-
+/**
+ * @author Zura Gabievi <zura.gabievi@gmail.com>
+ * @date 02/06/2015
+ */
+ 
 // gulp modules
 var del = require('del');
 var gulp = require('gulp');
