@@ -1,0 +1,84 @@
+/**
+ * @author Zura Gabievi <zura.gabievi@gmail.com>
+ * @date 20/05/2015
+ */
+
+// separators map
+$separator: (
+	element: '__',
+	modifier: '--'
+);
+
+// convert selector to string
+@function to-string($selector) {
+	$selector: inspect($selector);
+	$selector: str-slice($selector, 2, -2);
+	@return $selector;
+}
+
+// check parent selector
+@function parent($selector, $type: modifier) {
+	$selector: to-string($selector);
+
+	@if str-index($selector, map-get($separator, $type)) {
+		@return true;
+	} @else {
+		@return false;
+	}
+}
+
+// get block name from parent
+@function block($selector, $type: modifier) {
+	$selector: to-string($selector);
+	$index: str-index($selector, map-get($separator, $type)) - 1;
+	@return str-slice($selector, 0, $index);
+}
+
+// Block
+@mixin b($block) {
+	.#{$block} {
+		@content;
+	}
+}
+
+// Element
+@mixin e($element) {
+	$selector: &;
+
+	@if parent($selector, modifier) {
+		$block: block($selector, modifier);
+
+		@at-root {
+			#{$selector} {
+				#{$block + map-get($separator, element) + $element} {
+					@content;
+				}
+			}
+		}
+	} @elseif parent($selector, element) {
+		$block: block($selector, element);
+
+		@at-root {
+			#{$selector} {
+				#{$block + map-get($separator, element) + $element} {
+					@content;
+				}
+			}
+		}
+	} @else {
+		@at-root {
+			#{$selector + map-get($separator, element) + $element} {
+				@content;
+			}
+		}
+	}
+}
+
+// Modifier
+@mixin m($modifier) {
+	@at-root {
+		#{&}#{map-get($separator, modifier) + $modifier} {
+			@content;
+		}
+	}
+}

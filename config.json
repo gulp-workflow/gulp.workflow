@@ -1,0 +1,28 @@
+{
+	"environment": "development",
+	
+	"js": {
+		"extension": "js",
+		"filename": "bundle.js",
+		
+		"copy": [
+			"./bower_components/crafty/dist/crafty.*"
+		]
+	},
+	
+	"css": {
+		"extension": "scss",
+
+		"copy": [
+			{
+				"name": "bourbon",
+				"path": "./bower_components/bourbon/app/assets/stylesheets/**/*"
+			},
+			
+			{
+				"name": "neat",
+				"path": "./bower_components/neat/app/assets/stylesheets/**/*"
+			}
+		]
+	}
+}
