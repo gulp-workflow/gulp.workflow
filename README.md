@@ -5,7 +5,8 @@ Gulpfile.js that does the great things
 [![Build Status](https://semaphoreci.com/api/v1/projects/42b05518-3be1-401e-9447-78c094200f41/444086/shields_badge.svg)](https://semaphoreci.com/zgabievi/gulp-workflow)
 [![Codacy Badge](https://www.codacy.com/project/badge/204f90f3cd7a413a97ba9ab6b0d8309a)](https://www.codacy.com/app/zgabievi/gulp-workflow)
 [![Coverage Status](https://coveralls.io/repos/zgabievi/gulp.workflow/badge.svg)](https://coveralls.io/r/zgabievi/gulp.workflow)
-![Dependencies](https://david-dm.org/zgabievi/gulp.js-build.svg)
+[![Dependency Status](https://david-dm.org/zgabievi/gulp.workflow.svg)](https://david-dm.org/zgabievi/gulp.workflow)
+[![devDependency Status](https://david-dm.org/zgabievi/gulp.workflow/dev-status.svg)](https://david-dm.org/zgabievi/gulp.workflow#info=devDependencies)
 
 
 ## Dependencies
