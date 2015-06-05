@@ -1,7 +1,7 @@
 # gulp.workflow
 Gulpfile.js that does the great things
 
-[![Build Status](https://semaphoreci.com/api/v1/projects/42b05518-3be1-401e-9447-78c094200f41/444086/badge.svg)](https://semaphoreci.com/zgabievi/gulp-workflow)
+[![Build Status](https://semaphoreci.com/api/v1/projects/42b05518-3be1-401e-9447-78c094200f41/444086/shields_badge.svg)](https://semaphoreci.com/zgabievi/gulp-workflow)
 
 ## Dependencies
 - ["browser-sync": "^2.7.6"](https://www.npmjs.com/package/browser-sync/)
