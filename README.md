@@ -1,6 +1,7 @@
 # gulp.workflow
 Gulpfile.js that does the great things
 
+[![GitHub version](https://badge.fury.io/gh/zgabievi%2Fgulp.workflow.svg)](http://badge.fury.io/gh/zgabievi%2Fgulp.workflow)
 [![Build Status](https://semaphoreci.com/api/v1/projects/42b05518-3be1-401e-9447-78c094200f41/444086/shields_badge.svg)](https://semaphoreci.com/zgabievi/gulp-workflow)
 
 
